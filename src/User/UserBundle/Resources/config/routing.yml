@@ -1,0 +1,4 @@
+user_user_homepage:
+    path:     /Affichage
+    defaults: { _controller: UserUserBundle:Default:index }
+
