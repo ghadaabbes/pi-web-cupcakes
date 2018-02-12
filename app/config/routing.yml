@@ -1,8 +1,13 @@
-
-
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
-
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+acceuil:
+    resource: "@AcceuilBundle/Resources/config/routing.yml"
+    prefix:   /a
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+
+

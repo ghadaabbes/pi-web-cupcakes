@@ -26,6 +26,7 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
+
         main:
             #anonymous: ~
             # activate different ways to authenticate
@@ -39,14 +40,18 @@ security:
             form_login:
                 provider: fos_userbundle
                 csrf_token_generator: security.csrf.token_manager
-
                 require_previous_session: false
                 login_path: fos_user_security_login
                 check_path: fos_user_security_check
                 always_use_default_target_path: false
                 default_target_path:            homepage
-
-            logout:     true
+                success_handler: redirect.after.login
+            logout:     #true
+                target: /login
+                #path:   homepage
+                #path: security_logout
+                                # The name of the route to redirect to after logging out
+                #target: homepage
             anonymous:  true
 
     access_control:

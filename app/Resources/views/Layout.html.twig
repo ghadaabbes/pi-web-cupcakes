@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie ie7"><![endif]-->
+<!--[if IE 8]><html class="ie ie8"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="{{ asset('apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('favicon.png') }}" rel="icon">
+    <meta name="author" content="#{author}">
+    <meta name="keywords" content="#{keyword}">
+    <meta name="description" content="#{description}">
+    <title>The CupCakes Corner</title>
+    <!-- Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700%7CPacifico%7CVarela+Round%7CPoppins" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/ps-icon/ps-icon.css') }}">
+    <!-- CSS Library-->
+    <link rel="stylesheet" href="{{ asset('plugins/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/owl-carousel/assets/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/Magnific-Popup/dist/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/jquery-ui/jquery-ui.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/slick/slick/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/revolution/css/settings.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/revolution/css/layers.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/revolution/css/navigation.css') }}">
+    <!-- Custom-->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!--WARNING: Respond.js doesn't work if you view the page via file://-->
+    <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!--[if IE 7]><body class="ie7 lt-ie8 lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 8]><body class="ie8 lt-ie9 lt-ie10"><![endif]-->
+<!--[if IE 9]><body class="ie9 lt-ie10"><![endif]-->
+
+<body class="page-init">
+
+
+
+
+<div class="ps-searchbox">
+    <div class="ps-searchbox__remove"><i class="fa fa-remove"></i></div>
+    <div class="container">
+        <header>
+            <p>Entrer un mots clé:</p>
+            <form method="post" action="/product-grid.html">
+                <input class="form-control" type="text" placeholder="">
+                <button><i class="ps-icon--search"></i></button>
+            </form>
+        </header>
+        <div class="ps-searchbox__result">
+            <div class="row">
+
+
+
+
+            </div>
+        </div>
+        <footer class="text-center"><a class="ps-searchbox__morelink" href="product-grid.html">Voir tous les résulats</a></footer>
+    </div>
+</div>
+<div class="header--sidebar"></div>
+<header class="header" data-responsive="1199">
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 "><a class="ps-search-btn" href="#"><i class="ps-icon--search"></i></a>
+
+                    <div class="btn-group ps-dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language<i class="fa fa-angle-down"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navigation">
+        <div class="container">
+            <div class="menu-toggle"><span></span></div>
+            <div class="navigation__left">
+                <ul class="menu menu--left">
+                    <li ><a href="{{ path('homepage') }}">Acceuil</a>
+
+
+                    </li>
+
+                    <li class="menu-item-has-children" ><a href="about.html">Recettes</a>
+                        <ul class="sub-menu">
+
+                            <li><a href="listerrecettes">Recettes & Astuces</a></li>
+                            <li><a href="toprecettes">TOP Recettes</a></li>
+                            <li><a href="ajouterrecette">Déposer une Recette </a></li>
+                        </ul>
+
+
+
+                    </li>
+                    <li class="menu-item-has-children"><a href="product-grid.html">Siwar</a>
+                        <ul class="sub-menu">
+                            <li><a href="product-listing.html">Siwar</a></li>
+                            <li><a href="product-grid.html">Product Grid</a></li>
+                            <li><a href="">Détails  Produit</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="#">Ghada </a>
+                        <ul class="sub-menu">
+                            <li><a href="menu-1.html">Menu 1</a></li>
+                            <li><a href="menu-2.html">Menu 2</a></li>
+                            <li><a href="order-form.html">Order Form</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="cart.html">Cart</a></li>
+                            <li><a href="404.html">404 Page</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <a class="ps-logo" href="index.html"><img src="{{ asset ('images/logo-1.png') }}" alt=""></a>
+            <div class="navigation__right">
+                <ul class="menu menu--right">
+                    <li class="menu-item-has-children"><a href="#">Kristina</a>
+
+                        <ul class="sub-menu">
+                    <li><a href="order-form.html">Order Form</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                        </ul>
+
+                    </li>
+                    <li class="menu-item-has-children"><a href="blog-listing.html">Réclamation</a>
+                        <ul class="sub-menu">
+                            <li><a href="blog-detail.html">Envoyer</a></li>
+                            <li><a href="blog-detail.html">Consulter réclamation</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="blog-listing.html">Evaluation</a>
+                        <ul class="sub-menu">
+                            <li><a href="blog-detail.html">Envoyer</a></li>
+                            <li><a href="blog-detail.html">Consulter évaluation</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="#">Contact</a>
+                        <ul class="sub-menu">
+                            <li><a href="contact.html">Contact 1</a></li>
+                            <li><a href="contact-2.html">Contact 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <div class="ps-cart"><a class="ps-cart__toggle" href="#"><span><i>20</i></span><i class="ps-icon--shopping-cart"></i></a>
+                    <div class="ps-cart__listing">
+                        <div class="ps-cart__content">
+                            <div class="ps-cart-item">
+                                <a class="ps-cart-item__close" href="#"></a>
+                                <div class="ps-cart-item__thumbnail">
+                                    <a href="product-detail.html"></a><img src="{{ asset  ('images/cake/img-cake-1.jpg') }}" alt=""></div>
+                                <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">Amazin’ Glazin’</a>
+                                    <p><span>Quantité:<i>12</i></span><span>Totale:<i>176 dinars</i></span></p>
+                                </div>
+                            </div>
+                            <div class="ps-cart-item">
+                                <a class="ps-cart-item__close" href="#"></a>
+                                <div class="ps-cart-item__thumbnail">
+                                    <a href="product-detail.html"></a><img src="{{ asset  ('images/cake/img-cake-2.jpg') }}" alt=""></div>
+                                <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">The Crusty Croissant</a>
+                                    <p><span>Quantité:<i>12</i></span><span>Totale:<i>176 dinars</i></span></p>
+                                </div>
+                            </div>
+                            <div class="ps-cart-item">
+                                <a class="ps-cart-item__close" href="#"></a>
+                                <div class="ps-cart-item__thumbnail">
+                                    <a href="product-detail.html"></a><img src="{{ asset  ('images/cake/img-cake-3.jpg') }}" alt=""></div>
+                                <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">The Rolling Pin</a>
+                                    <p><span>Quantité:<i>12</i></span><span>Totale:<i>£176</i></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ps-cart__total">
+                            <p>Nombre de piéces:<span>36</span></p>
+                            <p>Prix Totale:<span>528.00 dinars</span></p>
+                        </div>
+                        <div class="ps-cart__footer"><a class="ps-btn ps-btn--view-bag" href="cart.html">View bag</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+    {% block try %} {% endblock %}
+{% block acceuil %} {%  endblock %}
+    {% block content %} {% endblock %}
+    {% block ABC %} {% endblock %}
+    {% block newsletter %} {% endblock %}
+    {% block contact %} {% endblock %}
+
+
+
+
+
+
+
+
+
+    <section class="ps-section ps-section--subscribe pt-80 pb-80">
+        <div class="container">
+            <div class="ps-subscribe">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
+                        <h4>Qui sommes-nous ?</h4>
+                        <p>quelques lignes à rédiger.</p>
+
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
+                        <a class="ps-subscribe__logo" href="index.html"><img src="{{ asset  ('images/logo-1.png') }}" alt=""></a>
+                    </div>
+
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
+                        <h4>Newsletter</h4>
+                        <p>Recevez les meilleures recettes,astuces, ainsi que les promotion sur les produits qui vous correspondent.</p>
+                        <form class="ps-subscribe__form" method="post" action="_action">
+                            <input class="form-control" type="text" placeholder="Tapez votre email...">
+                            <button class="ps-btn ps-btn--sm">S'inscrire</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ps-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                    <div class="ps-widget ps-widget--footer ps-widget--payment">
+                        <div class="ps-widget__header">
+                            <h3 class="ps-widget__title">PAYMENTS ACCEPTEE</h3>
+                        </div>
+                        <div class="ps-widget__content">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="{{ asset  ('images/payment/0.png') }}" alt=""></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                    <div class="ps-widget ps-widget--footer ps-widget--worktime">
+                        <div class="ps-widget__header">
+                            <h3 class="ps-widget__title"> Termes et conditions </h3>
+                        </div>
+                        <div class="ps-widget__content">
+
+                             <!-- empty here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                    <div class="ps-widget ps-widget--footer ps-widget--order">
+                        <div class="ps-widget__header">
+                            <h3 class="ps-widget__title"></h3>
+                        </div>
+                        <div class="ps-widget__content">
+                            <ul class="ps-list--line">
+                                <li><a href="#"><!-- empty here --></a></li>
+                                <li><a href="#"><!-- empty here --></a></li>
+                                <li><a href="#"><!-- empty here --></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                    <div class="ps-widget ps-widget--footer ps-widget--connect">
+                        <div class="ps-widget__header">
+                            <h3 class="ps-widget__title">Suivez-nous sur</h3>
+                        </div>
+                        <div class="ps-widget__content">
+                            <ul class="ps-widget__social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                            <a href="#"><img src="{{ asset  ('images/app.jpg') }}" alt=""></a>
+                            <p>@2018 Design by<a href="#"> MindSpace 3A19 Esprit</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal-popup mfp-with-anim mfp-hide" id="quickview-modal" tabindex="-1">
+        <button class="modal-close"><i class="fa fa-remove"></i></button>
+        <div class="ps-product-modal ps-product--detail clearfix">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
+                <div class="ps-product__thumbnail">
+                    <div class="quickview--main" data-owl-auto="true" data-owl-loop="false" data-owl-speed="10000" data-owl-gap="0" data-owl-nav="false" data-owl-dots="false" data-owl-animate-in="" data-owl-animate-out="" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-nav-left="&lt;i class=&quot;fa fa-angle-left&quot;&gt;&lt;/i&gt;" data-owl-nav-right="&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;">
+
+                        <div class="ps-product__image"><img src="{{ asset ('images/cake/img-cake-12.jpg') }}" alt=""></div>
+                        <div class="ps-product__image"><img src="{{ asset ('images/cake/img-cake-11.jpg') }}" alt=""></div>
+                        <div class="ps-product__image"><img src="{{ asset ('images/cake/img-cake-10.jpg') }}" alt=""></div>
+                        <div class="ps-product__image"><img src="{{ asset ('images/cake/img-cake-6.jpg') }}" alt=""></div>
+                        <div class="ps-product__image"><img src="{{ asset ('images/cake/img-cake-5.jpg') }}" alt=""></div>
+                    </div>
+                    <div class="quickview--thumbnail" data-owl-auto="true" data-owl-loop="false" data-owl-speed="10000" data-owl-gap="20" data-owl-nav="false" data-owl-dots="false" data-owl-animate-in="" data-owl-animate-out="" data-owl-item="4" data-owl-item-xs="2" data-owl-item-sm="3" data-owl-item-md="4" data-owl-item-lg="4" data-owl-nav-left="&lt;i class=&quot;fa fa-angle-left&quot;&gt;&lt;/i&gt;" data-owl-nav-right="&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;"><img src="{{ asset  ('images/cake/img-cake-12.jpg') }}" alt=""><img src="{{ asset  ('images/cake/img-cake-11.jpg') }}" alt=""><img src="{{ asset  ('images/cake/img-cake-10.jpg') }}" alt=""><img src="{{ asset  ('images/cake/img-cake-6.jpg') }}" alt=""><img src="{{ asset  ('images/cake/img-cake-5.jpg') }}" alt=""></div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 ">
+                <header>
+                    <h3 class="ps-product__name">Anytime Cakes</h3>
+                    <select class="ps-rating">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <p class="ps-product__price">£15.00
+                        <del>£25.00</del>
+                    </p>
+                    <div class="ps-product__meta">
+                        <p><span> Availability: </span> In stock</p>
+                        <p class="category"><span>CATEGORIES: </span><a href="product-grid.html">Cupcake</a>,<a href="product-grid.html">organic</a>,<a href="product-grid.html"> sugar</a>,<a href="product-grid.html"> sweet</a>,<a href="product-grid.html"> bio</a></p>
+                    </div>
+                    <div class="form-group ps-product__size">
+                        <label>Size:</label>
+                        <select class="ps-select" data-placeholder="Popupar product">
+                            <option value="01">Choose a option</option>
+                            <option value="01">Item 01</option>
+                            <option value="02">Item 02</option>
+                            <option value="03">Item 03</option>
+                        </select>
+                    </div>
+                    <div class="ps-product__shop">
+                        <div class="form-group--number">
+                            <button class="minus"><span>-</span></button>
+                            <input class="form-control" type="text" value="1">
+                            <button class="plus"><span>+</span></button>
+                        </div>
+                        <ul class="ps-product__action">
+                            <li><a href="#" data-tooltip="Add to wishlist"><i class="ps-icon--heart"></i></a></li>
+                            <li><a href="#" data-tooltip="Compare"><i class="ps-icon--reload"></i></a></li>
+                        </ul>
+                    </div>
+                </header>
+                <footer><a class="ps-btn--fullwidth ps-btn ps-btn--sm" href="#">Purchase<i class="fa fa-angle-right"></i></a>
+                    <p class="ps-product__sharing">Share with:<a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-twitter"></i></a></p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+<!-- JS Library-->
+<script type="text/javascript" src="{{ asset('plugins/jquery/dist/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/owl-carousel/owl.carousel.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/overflow-text.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/masonry.pkgd.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/imagesloaded.pkgd.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/jquery-bar-rating/dist/jquery.barrating.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/jquery-nice-select/js/jquery.nice-select.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/Magnific-Popup/dist/jquery.magnific-popup.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/moment.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/slick/slick/slick.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/skrollr.min.js') }}"></script>
+
+
+<script type="text/javascript" src=" {{ asset('plugins/gmap3.min.js') }}"></script>
+
+
+
+<!-- Revolution - slider-->
+<script type="text/javascript" src="{{ asset('plugins/revolution/js/jquery.themepunch.tools.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plugins/revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
+<!-- Custom scripts-->
+<script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+</body>
+
+</html>

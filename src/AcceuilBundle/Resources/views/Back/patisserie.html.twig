@@ -1,0 +1,99 @@
+{% extends'AcceuilBundle::backLayout.html.twig' %}
+{% block titre %} Nos patisseries  {% endblock %}
+
+{% block body%}
+    <div class="main-grid">
+        <div class="agile-grids">
+            <!-- gallery -->
+            <div class="grids-heading gallery-heading">
+                <h2>Nos patisseries</h2>
+            </div>
+            <div class="gallery-grids">
+                <div class="show-reel">
+                    <div class="col-md-3 agile-gallery-grid">
+                        <div class="agile-gallery">
+                            <a href="{{ asset('images/p1.png') }}" class="lsb-preview" data-lsb-group="header">
+                                <img src="{{ asset('images/p1.png') }}" alt="" />
+                                <div class="agileits-caption">
+                                    <h4>Nom</h4>
+                                    <p>Details</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 agile-gallery-grid">
+                        <div class="agile-gallery">
+                            <a href="{{ asset('images/p2.jpg') }}" class="lsb-preview" data-lsb-group="header">
+                                <img src="{{ asset('images/p2.jpg') }}" alt="" />
+                                <div class="agileits-caption">
+                                    <h4>nom</h4>
+                                    <p>Details</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 agile-gallery-grid">
+                        <div class="agile-gallery">
+                            <a href="{{ asset('images/p3.jpg') }}" class="lsb-preview" data-lsb-group="header">
+                                <img src="{{ asset('images/p3.jpg') }}" alt="" />
+                                <div class="agileits-caption">
+                                    <h4>nom</h4>
+                                    <p>details</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 agile-gallery-grid">
+                        <div class="agile-gallery">
+                            <a href="{{ asset('images/p4.jpg') }}" class="lsb-preview" data-lsb-group="header">
+                                <img src="{{ asset('images/p4.jpg') }}" alt="" />
+                                <div class="agileits-caption">
+                                    <h4>nom</h4>
+                                    <p>details</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+
+                <div class="show-reel">
+                    <div class="col-md-3 agile-gallery-grid">
+                        <div class="agile-gallery">
+                            <a href="{{ asset('images/p5.jpg') }}" class="lsb-preview" data-lsb-group="header">
+                                <img src="{{ asset('images/p5.jpg') }}" alt="" />
+                                <div class="agileits-caption">
+                                    <h4>nom</h4>
+                                    <p>details</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 agile-gallery-grid">
+                        <div class="agile-gallery">
+                            <a href="{{ asset('images/p6.jpg') }}" class="lsb-preview" data-lsb-group="header">
+                                <img src="{{ asset('images/p6.jpg') }}" alt="" />
+                                <div class="agileits-caption">
+                                    <h4>nom</h4>
+                                    <p>details</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <script>
+                    $(window).load(function() {
+                        $.fn.lightspeedBox();
+                    });
+
+                </script>
+            </div>
+            <!-- //gallery -->
+
+        </div>
+    </div>
+
+
+{% endblock %}

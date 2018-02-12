@@ -1,0 +1,52 @@
+acceuil_homepage:
+    path:     /
+    defaults: { _controller: AcceuilBundle:Default:index }
+
+acceuil:
+    path:     /acceuil
+    defaults: { _controller: AcceuilBundle:Default:acceuil }
+
+homepage:
+    path:     /home
+    defaults: { _controller: AcceuilBundle:Default:acceuil }
+#BackOffice
+
+backoffice:
+    path:     /aa
+    defaults: { _controller: AcceuilBundle:Back:index1 }
+
+acceuil_homepage:
+    path:     /acceuil1
+    defaults: { _controller: AcceuilBundle:Back:acceuil }
+
+affiche_homepage:
+    path:     /affiche
+    defaults: { _controller: AcceuilBundle:Back:afficheproduit }
+
+client_homepage:
+    path:     /client
+    defaults: { _controller: AcceuilBundle:Back:clients }
+
+patisserie_homepage:
+    path:     /patisserie
+    defaults: { _controller: AcceuilBundle:Back:patisserie }
+
+promotion_homepage:
+    path:     /promotion
+    defaults: { _controller: AcceuilBundle:Back:promotion }
+
+wishlist_homepage:
+    path:     /wishlist
+    defaults: { _controller: AcceuilBundle:Back:wishlist }
+
+notification_homepage:
+    path:     /wishlist
+    defaults: { _controller: AcceuilBundle:Back:notification }
+
+reclamation_homepage:
+    path:     /reclamation
+    defaults: { _controller: AcceuilBundle:Back:reclamation}
+
+statistique_homepage:
+    path:     /statistique
+    defaults: { _controller: AcceuilBundle:Back:statistique }
