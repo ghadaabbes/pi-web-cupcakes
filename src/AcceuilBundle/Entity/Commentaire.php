@@ -22,14 +22,12 @@ class Commentaire
     private $id;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="comment", type="string", length=255, nullable=false)
+     * @ORM\Column(type="text",nullable=false)
      */
     private $comment;
 
     /**
-     * @var \AcceuilBundle\Entity\Recette
+     * @var \Recette
      *
      * @ORM\ManyToOne(targetEntity="Recette")
      * @ORM\JoinColumns({
@@ -39,11 +37,11 @@ class Commentaire
     private $idrecette;
 
     /**
-     * @var \User\UserBundle\Entity\User
+     * @var \User
      *
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     * @ORM\JoinColumn(name="id_user", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="iduser", referencedColumnName="id")
      * })
      */
     private $iduser;
@@ -65,7 +63,7 @@ class Commentaire
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getComment()
     {
@@ -73,7 +71,7 @@ class Commentaire
     }
 
     /**
-     * @param string $comment
+     * @param mixed $comment
      */
     public function setComment($comment)
     {
@@ -81,7 +79,7 @@ class Commentaire
     }
 
     /**
-     * @return \AcceuilBundle\Entity\Recette
+     * @return \Recette
      */
     public function getIdrecette()
     {
@@ -89,7 +87,7 @@ class Commentaire
     }
 
     /**
-     * @param \AcceuilBundle\Entity\Recette $idrecette
+     * @param \Recette $idrecette
      */
     public function setIdrecette($idrecette)
     {
@@ -97,7 +95,7 @@ class Commentaire
     }
 
     /**
-     * @return \User\UserBundle\Entity\User
+     * @return \User
      */
     public function getIduser()
     {
@@ -105,11 +103,11 @@ class Commentaire
     }
 
     /**
-     * @param \User\UserBundle\Entity\User $id
+     * @param \User $iduser
      */
-    public function setIduser($id)
+    public function setIduser($iduser)
     {
-        $this->iduser = $id;
+        $this->iduser = $iduser;
     }
 
 
