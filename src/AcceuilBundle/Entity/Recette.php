@@ -22,6 +22,7 @@ class Recette
      */
     private $id;
 
+
     /**
      * @var string
      *
@@ -46,13 +47,13 @@ class Recette
 
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string
+     * @Assert\NotBlank(message="Please, enter un image.")
+     * @Assert\Image()
+     * @ORM\Column(type="string", length=255 , nullable=true)
      */
     public $nomImage;
-    /**
-     * @Assert\File(maxSize="500k")
-     */
-    public $file;
+
     /**
      * @var string
      *
@@ -103,7 +104,7 @@ class Recette
     private $astuces;
 
     /**
-     * @var \User\UserBundle\Entity\User
+     * @var \User
      *
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
@@ -121,6 +122,7 @@ class Recette
      * @ORM\Column(type="text",nullable=false)
      */
     private $etapes;
+
     /**
      * @return int
      */
@@ -184,41 +186,23 @@ class Recette
     {
         $this->description = $description;
     }
-    public function getWebPath(){
-        return null===$this->nomImage ? null : $this->getUploaDir.'/'.$this->nomImage;
-    }
-    protected function getUploadRootDir(){
-        return __DIR__.'/../../../../web/'.$this->getUploadDir();
-    }
-    protected function getUploadDir(){
-        return 'images';
-    }
-    public function UploadProfilePicture(){
-        $this->file->move($this->getUploadRootDir(), $this->file->getClientOriginalName());
-        $this->nomImage=$this->file->getClientOriginalName();
-        $this->file=null;
-    }
 
     /**
-     * Set nomImage
-     * @param string $nomImage
-     * @return Categorie
-     */
-    public function setNomImage($nomImage){
-        $this->nomImage==$nomImage;
-        return $this;
-
-    }
-
-    /**
-     * Get nomimage
-     *
-     * @return string
+     * @return mixed
      */
     public function getNomImage()
     {
         return $this->nomImage;
     }
+
+    /**
+     * @param mixed $nomImage
+     */
+    public function setNomImage($nomImage)
+    {
+        $this->nomImage = $nomImage;
+    }
+
 
     /**
      * @return string
@@ -240,7 +224,7 @@ class Recette
      * @return \DateTime
      */
     public function getTempsPreparation()
-    {
+    {  // $this->tempsPreparation= new \DateTime();
         return $this->tempsPreparation;
     }
 
@@ -256,7 +240,7 @@ class Recette
      * @return \DateTime
      */
     public function getTempsRepos()
-    {
+    { // $this->tempsRepos= new \DateTime();
         return $this->tempsRepos;
     }
 
@@ -272,7 +256,7 @@ class Recette
      * @return \DateTime
      */
     public function getTempsCuisson()
-    {
+    { //  $this->tempsCuisson= new \DateTime();
         return $this->tempsCuisson;
     }
 
@@ -333,7 +317,7 @@ class Recette
     }
 
     /**
-     * @return \User\UserBundle\Entity\User
+     * @return \User
      */
     public function getIduser()
     {
@@ -341,7 +325,7 @@ class Recette
     }
 
     /**
-     * @param \User\UserBundle\Entity\User $iduser
+     * @param \User $iduser
      */
     public function setIduser($iduser)
     {
@@ -381,8 +365,4 @@ class Recette
     }
 
 
-
-
-
 }
-
