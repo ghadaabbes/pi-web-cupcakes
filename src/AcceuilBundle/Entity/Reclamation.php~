@@ -38,10 +38,12 @@ class Reclamation
     private $description;
 
     /**
-     * @var
+     * @var \AcceuilBundle\Entity\Patisserie
      *
-     * @ORM\ManyToOne(targetEntity="Patisserie" )
-     * @ORM\JoinColumn(name="Patisserie", referencedColumnName="id_Patisserie")
+     * @ORM\OneToMany(targetEntity="Patisserie",mappedBy="Reclamation")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="Patisserie", referencedColumnName="id_Patisserie")
+     * })
      */
     private $Patisserie;
 
@@ -171,39 +173,5 @@ class Reclamation
     public function removeIdPat(\AcceuilBundle\Entity\Patisserie $idPat)
     {
         $this->idPat->removeElement($idPat);
-    }
-
-    /**
-     * Add patisserie
-     *
-     * @param \AcceuilBundle\Entity\Patisserie $patisserie
-     *
-     * @return Reclamation
-     */
-    public function addPatisserie(\AcceuilBundle\Entity\Patisserie $patisserie)
-    {
-        $this->Patisserie[] = $patisserie;
-
-        return $this;
-    }
-
-    /**
-     * Remove patisserie
-     *
-     * @param \AcceuilBundle\Entity\Patisserie $patisserie
-     */
-    public function removePatisserie(\AcceuilBundle\Entity\Patisserie $patisserie)
-    {
-        $this->Patisserie->removeElement($patisserie);
-    }
-
-    /**
-     * Get patisserie
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getPatisserie()
-    {
-        return $this->Patisserie;
     }
 }
