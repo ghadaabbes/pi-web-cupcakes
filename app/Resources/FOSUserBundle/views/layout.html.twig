@@ -33,6 +33,10 @@
     <link rel="stylesheet" href="{{ asset('plugins/revolution/css/settings.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/revolution/css/layers.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/revolution/css/navigation.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+
+    <script src="{{ asset('jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
     <!-- Custom-->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
@@ -99,13 +103,14 @@
 
                 <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 "><a class="ps-search-btn" href="#"><i class="ps-icon--search"></i></a>
 
-                    </div>
                     <div>{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                        Connecté en tant que {{ app.user.username }} - <a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
-                    {% else %}
-                        <a href="{{ path('fos_user_security_login') }}">Connexion</a>
-                    {% endif %}
+                            <li><a href="{{ path('fos_user_profile_edit') }}">
+                                    Connecté en tant que {{ app.user.username }} </a> </li>- <a href="{{ path('fos_user_security_logout') }}">Déconnexion</a> <a href="{{ path('fos_user_profile_show') }}">Voir profil</a>
+                        {% else %}
+                            <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+                        {% endif %}
                     </div>
+
                 </div>
             </div>
         </div>
@@ -123,8 +128,8 @@
                     <li class="menu-item-has-children" ><a>Recettes</a>
                         <ul class="sub-menu">
 
-                            <li><a href="listerRecettes">Recettes & Astuces</a></li>
-                            <li><a href="topRecettes">TOP Recettes</a></li>
+                            <li><a href="{{ path('Recettes_Types') }}">Recettes & Astuces</a></li>
+                            <li><a href="{{ path('top_Recettes') }}">TOP Recettes</a></li>
                         </ul>
 
 

@@ -7,3 +7,30 @@ ajouter_Recette:
 mes_Recettes:
     path:     /mesRecettes
     defaults: { _controller: RecetteBundle:Recette:mesRecettes }
+une_Recette:
+    path:     /afficherRecette/{id}
+    defaults: { _controller: RecetteBundle:Recette:afficherRecette }
+modifier_Recette:
+    path:     /modifierRecette/{id}
+    defaults: { _controller: RecetteBundle:Recette:modifierRecette }
+supprimer_Recette:
+    path:     /supprimerRecette/{id}
+    defaults: { _controller: RecetteBundle:Recette:supprimerRecette }
+list_Recettes:
+    path:     /listRecettes
+    defaults: { _controller: RecetteBundle:Recette:listRecettes }
+top_Recettes:
+    path:     /topRecettes
+    defaults: { _controller: RecetteBundle:Recette:topRecettes }
+Recherche_Recette_DQL:
+    path:     /RechRecetteDQL
+    defaults: { _controller: RecetteBundle:Recette:RechRecetteDQL }
+Recettes_Types:
+    path:     /RecetteTypes
+    defaults: { _controller: RecetteBundle:Recette:RecetteTypes }
+recette_par_type:
+    path:     /RecettesParType/{type}
+    defaults: { _controller: RecetteBundle:Recette:RecettesParType }
+
+
+

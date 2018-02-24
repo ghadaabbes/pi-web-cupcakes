@@ -15,6 +15,7 @@ class User extends FosUser
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\OneToMany(targetEntity="user", mappedBy="recette")
      */
     protected $id;
 

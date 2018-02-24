@@ -1,3 +1,7 @@
+recette:
+    resource: "@RecetteBundle/Resources/config/routing.yml"
+    prefix:   /recette
+
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
@@ -8,6 +12,7 @@ acceuil:
 fos_user_register:
     resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
     prefix: /register
+
 
 
 

@@ -1,0 +1,11 @@
+{% extends "@FOSUser/layout.html.twig" %}
+{% block try %}
+
+<h1> TOP 10 NOUVELLES recettes</h1>
+ {%  for vv in v %}
+        {{ vv.idrecette.nom }}
+     {{ vv.rating }}<br>
+{% endfor %}
+<hr>
+
+{% endblock %}

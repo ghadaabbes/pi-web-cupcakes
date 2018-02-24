@@ -1,52 +1,79 @@
 {% extends "@FOSUser/layout.html.twig" %}
 {% block try %}
 
-    <br>
-    <br>
-    <br>
-    <br>
- <a href="{{ path('Rechercher_Recettes') }}"> Chercher recettes par nom</a>
+    <div id="back2top"><i class="fa fa-angle-up"></i></div>
+    <div class="loader"></div>
+    <div class="page-wrap">
+        <!-- Heros-->
 
 
+            <div class="container">
+                <div class="row">
+                    <br>
+                    <br>
+                    <br>
+                    <div class="ps-section__header text-center mb-50">
+                        <div class="ps-section__top">Cupcackes Corner </div>
+                        <h3 class="ps-section__title ps-section__title--full">Recettes</h3>
 
-    <br>
-    <br>
-    <br>
-    <br>
+                    </div>
+
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 col-lg-push-3 col-md-push-3">
+                        <div class="ps-shop-listing pt-80 pb-40">
+                            <div class="ps-shop-features">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 "><img class="mb-30" src="images/product-banner/012x.jpg" alt="">
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 "><img class="mb-30" src="images/product-banner/022x.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ps-shop-filter">
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 ">
+                                        <div class="form-group">
+                                            <label>Trier Par:</label>
+                                            <select class="ps-select" data-placeholder="Popupar product">
+                                                <option value="01">Popularité</option>
+                                                <option value="01">Difficulté</option>
+                                                <option value="02">Cout</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="ps-shop" >
+                                {% for recette in r %}
+                                <div class="ps-product--list ps-product--list-large">
+
+                                        <div class="ps-product__thumbnail">
+                                            <a class="ps-product__overlay" href="{{ path("une_Recette",{"id":recette.id}) }}"></a><img src="{{ asset('images/' ~ recette.nomImage) }}" alt=""></div>
+                                        <div class="ps-product__content">
+                                            <h4 class="ps-product__title"><a href="{{ path("une_Recette",{"id":recette.id}) }}">{{ recette.nom }}</a></h4>
+
+                                            <div class="ps-product__category"><a class="ps-product__category" href="#" >{{ recette.type }} - </a><a class="ps-product__category" href="#">{{ recette.difficulte }} - </a><a class="ps-product__category" href="#">{{ recette.cout }}</a>
+                                            </div>
+
+                                            <p class="ps-product__price">Par: {{ recette.iduser.username }}</p>
+                                            <footer class="ps-product__footer clearfix"><a class="ps-btn ps-btn--sm" href="{{ path('une_Recette',{"id":recette.id}) }}">Consulter<i class="fa fa-angle-right"></i></a>
+
+                                            </footer>
+                                        </div>
+                                <hr>
+                                </div>
+
+                                {% endfor %}
+                            </div>
+
+                        </div>
+                    </div>
+
+            </div>
 
 
-    <hr color="lightsalmon">
-    <h4>Tout Recettes</h4>
-
-    <table border="1">
-        <tr>
-            <td> Nom</td>
-            <td>Image </td>
-            <td> Type</td>
-            <td> Description</td>
-            <td> Voir Recette</td>
-        </tr>
-        <div>
-
-        {% for recette in r %}
-            <tr>
-                <td> {{ recette.nom }}</td>
-                <td> <img src="{{ asset('images/' ~ recette.nomImage) }}" style="width: 80px;height: 80px"></td>
-                <td> {{ recette.type }}</td>
-                <td> {{ recette.description }}</td>
-                <td> <a href="{{ path("une_Recette",{"id":recette.id}) }}" target="_blank">Voir recette par ici</a></td>
+    </div>
 
 
-            </tr>
-
-
-        {% endfor %}
-        </div>
-
-    </table>
-
-    <br>
-    <br>
-    <br>
-    <br>
 {% endblock %}

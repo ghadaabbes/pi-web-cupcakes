@@ -13,8 +13,13 @@ namespace FOS\UserBundle\Form\Type;
 
 use FOS\UserBundle\Util\LegacyFormHelper;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\DataTransformer\DataTransformerChain;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Tests\Fixtures\FixedDataTransformer;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+
+
 
 class RegistrationFormType extends AbstractType
 {
@@ -46,6 +51,16 @@ class RegistrationFormType extends AbstractType
                 'second_options' => array('label' => 'form.password_confirmation'),
                 'invalid_message' => 'fos_user.password.mismatch',
             ))
+            ->add($builder->create('roles','choice',array(
+                'label'=>'Role:',
+                'mapped'=>true,
+                'expanded'=>true,
+                'multiple'=>false,
+                'choices'=>array(
+                    'ROLE_AGENT'=>'Agent',
+                    'ROLE_CLIENT'=>'Client',
+                )
+            )))
         ;
     }
 

@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * Recette
  *
  * @ORM\Table(name="recette", indexes={@ORM\Index(name="FK5", columns={"iduser"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="RecetteBundle\Repository\RecetteRepository")
  */
 class Recette
 {
@@ -21,6 +21,7 @@ class Recette
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
+
 
 
     /**
@@ -57,7 +58,7 @@ class Recette
     /**
      * @var string
      *
-     * @ORM\Column(name="cout", type="string", length=255, nullable=false)
+     * @ORM\Column(name="cout", type="string", length=255, nullable=true)
      */
     private $cout;
 
@@ -106,7 +107,7 @@ class Recette
     /**
      * @var \User
      *
-     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="User\UserBundle\Entity\User")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="iduser", referencedColumnName="id")
      * })

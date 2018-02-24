@@ -1,0 +1,32 @@
+{% extends "@FOSUser/layout.html.twig" %}
+{% block try %}
+
+    {{ form_start(form) }}
+    {{ form_end(form) }}
+
+
+
+    <table border="1">
+        <td> nom</td>
+        <td> type</td>
+        <td>cout </td>
+        <td>difficulte</td>
+
+
+
+        </tr>
+        {% for r in recettes %}
+            <tr>
+                <td> {{ r.nom }}</td>
+                <td> {{ r.type }}</td>
+                <td> {{ r.cout }}</td>
+                <td> {{ r.difficulte }}</td>
+
+
+
+            </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock %}

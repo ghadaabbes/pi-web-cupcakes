@@ -1,77 +1,275 @@
 {% extends "@FOSUser/layout.html.twig" %}
 {% block try %}
+
     <br>
     <br>
     <br>
     <br>
 
+    <div id="back2top"><i class="fa fa-angle-up"></i></div>
+    <div class="loader"></div>
+    <div class="page-wrap" >
+        <div class="ps-banner--home-1">
+            <div class="rev_slider_wrapper fullscreen-container" id="revolution-slider-1" data-alias="concept121" data-source="gallery" style="background-color:#000000;padding:0px;">
+                <div class="rev_slider fullscreenbanner" id="rev_slider_1059_1" style="display:none;" data-version="5.4.1">
+                    <ul class="ps-banner">
+                        <li data-index="rs-2972" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{{ asset('../../assets/images/concept4-100x100.jpg') }}" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""><img class="rev-slidebg" src="{{  asset('images/banner/1.jpg') }}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" data-no-retina>
+                            <div class="tp-caption ps-banner__caption" id="layer01" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-100','-80','-120','-120']" data-width="['none','none','none','400']" data-whitespace="['nowrap','nowrap','nowrap','normal']" data-type="text" data-responsive_offset="on" data-frames="[{&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:1700,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1000,&quot;to&quot;:&quot;x:left(R);&quot;,&quot;ease&quot;:&quot;Power3.easeIn&quot;}]" style="z-index: 7; white-space: nowrap;text-transform:left;">{{r.nom}}</div>
+                            <div class="tp-caption ps-banner__description" id="layer02" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-type="text" data-responsive_offset="on" data-textAlign="['center','center','center','center']" data-frames="[{&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:1500,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1000,&quot;to&quot;:&quot;x:left(R);&quot;,&quot;ease&quot;:&quot;Power3.easeIn&quot;}]">
 
-    <table border="1">
+                        </li>
+                        <li data-index="rs-2973" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{{ asset('../../assets/images/concept4-100x100.jpg') }}" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""><img class="rev-slidebg" src="{{  asset('images/banner/2.jpg') }}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" data-no-retina>
+                            <div class="tp-caption ps-banner__caption" id="layer04" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-100','-80','-120','-120']" data-width="['none','none','none','400']" data-whitespace="['nowrap','nowrap','nowrap','normal']" data-type="text" data-responsive_offset="on" data-frames="[{&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:1700,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1000,&quot;to&quot;:&quot;x:left(R);&quot;,&quot;ease&quot;:&quot;Power3.easeIn&quot;}]" style="z-index: 7; white-space: nowrap;text-transform:left;"></div>
+                            <div class="tp-caption ps-banner__description" id="layer05" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-type="text" data-responsive_offset="on" data-textAlign="['center','center','center','center']" data-frames="[{&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:1500,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1000,&quot;to&quot;:&quot;x:left(R);&quot;,&quot;ease&quot;:&quot;Power3.easeIn&quot;}]"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Heros-->
 
-        <tr>
-            <td> nom </td>
-            <td>Image </td>
-            <td> Type</td>
-            <td> description </td>
-            <td> cout </td>
-            <td> tempsPreparation </td>
-            <td> tempsReposCuisson</td>
-            <td> tempsRepos </td>
-            <td> nbPersonne </td>
-            <td> difficulte </td>
-            <td> astuces </td>
+            <div class="ps-section__content text-center" >
 
-            <td> ingredients</td>
-            <td> etapes</td>
-
-
-        </tr>
-    <tr>
-
-            <td>{{ r.nom }} </td>
-        <td> <img src="{{ asset('images/' ~ r.nomImage) }}" style="width: 80px;height: 80px"></td>
-                <td> {{ r.type }}</td>
-                <td> {{ r.description }}</td>
-                <td> {{ r.cout }}</td>
-                <td> {{ r.tempsPreparation|date('H:i') }}</td>
-                <td> {{ r.tempsCuisson|date('H:i') }}</td>
-                <td> {{ r.tempsRepos|date('H:i') }}</td>
-                <td> {{ r.nbPersonne }}</td>
-                <td> {{ r.difficulte }}</td>
-                <td> {{ r.astuces }}</td>
-
-                <td> {{ r.ingredients }}</td>
-                <td> {{ r.etapes }}</td>
-
-    </tr>
+                <div class="ps-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="#">Recettes </a></li>
+                        <li><a href="#">{{ r.type }} </a></li>
+                        <li class="active">{{r.nom}}</li>
+                    </ol>
+                </div>
+            </div>
 
 
-    </table>
-    <br>
-    <br>
-    <br>
-    <br>
-    <hr color="lightsalmon">
-    <a class="linktoaddcomment" href="#">Commenter Cette Recette !</a>
-    <div class="hideTheCommentAdd" hidden>
 
-        {{ form_start(b) }}
 
-        {{ form_end(b) }}
+        <div class="ps-section pt-80 pb-80">
+            <div class="container">
+
+                <div class="ps-product--detail">
+                    <div class="row">
+
+
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
+                            <div class="ps-product__thumbnail">
+
+                                <div class="owl-slider primary" data-owl-auto="true" data-owl-loop="false" data-owl-speed="10000"
+                                     data-owl-gap="0" data-owl-nav="false" data-owl-dots="false" data-owl-animate-in=""
+                                     data-owl-animate-out="" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1"
+                                     data-owl-item-md="1" data-owl-item-lg="1" data-owl-nav-left="<i class='fa fa-angle-left'></i>"
+                                     data-owl-nav-right="<i class='fa fa-angle-right'></i>">
+
+                                    <div class="ps-product__image"><img src="{{ asset('images/' ~ r.nomImage) }}" alt=""></div>
+                                </div>
+                                <div class="owl-slider second mb-30"
+                                     data-owl-auto="true" data-owl-loop="false"
+                                     data-owl-speed="10000" data-owl-gap="20"
+                                     data-owl-nav="false" data-owl-dots="false"
+                                     data-owl-animate-in="" data-owl-animate-out=""
+                                     data-owl-item="4" data-owl-item-xs="2"
+                                     data-owl-item-sm="3" data-owl-item-md="4"
+                                     data-owl-item-lg="4" data-owl-nav-left="<i
+                                     class='fa fa-angle-left'></i>"
+                                     data-owl-nav-right="'i class='fa fa-angle-right'></i>">
+                                    <img src="" alt=""></div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 ">
+                            <header>
+                                <h3 class="ps-product__name">{{r.nom}}</h3>
+
+                                <p class="ps-product__price"> Type: {{r.type}}
+                                    <div hidden>
+                                {% set ok=0 %}
+                                {% for x in xx %}
+                       {% set ok = ok + x.rating  %}
+                                 {{ (note|number_format)}}
+                                {% endfor %}
+                                </div>
+
+
+                                {% if (note|number_format)!= 0 %}
+                                    {{ (ok //(note|number_format))|rating}}
+
+                                {% endif %}
+                                {% if (note|number_format)== 0 %}
+                                    {{ 0|rating }}
+
+                                {% endif %}
+
+
+
+                                </p><a class="ps-product__quickview popup-modal" href="#" data-effect="mfp-zoom-out">Description:</a>
+                                <div class="ps-product__description">
+
+                                    <p>{{ r.description }}</p>
+                                </div>
+                                <div class="ps-product__meta">
+                                    <p><span>Recette par: </span> {{ r.iduser.username }}</p>
+                                </div>
+
+
+                                <footer>
+                                    <div class="row">
+
+
+                                        <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12 ">
+                                            <p class="ps-product__sharing">Noter la recette: <span class="showVote" ><img src="{{ asset('images/star.png') }}" style="width: 30px;height: 30px;"></span></p>
+                                        </div>
+                                        <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12 ">
+                                            <p class="ps-product__sharing">Partager sur:<a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-twitter"></i></a></p>
+                                        </div>
+                                    </div>
+                                </footer>
+
+
+
+
+                            </header>
+                        </div>
+
+
+                    </div>
+
+                    </div>
+                    <div>
+
+                        <nav class="navbar navbar-light bg-light" style="background-color: 	 #E1E1D6;">
+                            <span class="navbar-brand mb-0 h1" style="color:#565656 ;"><b>GUIDE DE PRÉPARATION :{{r.nom }}</b></span>
+                        </nav>
+                        <nav class="navbar navbar-light bg-light" >
+
+                        <hr style=" color:salmon; background-color:#565656; height:2px;" />
+                        <div style="text-align: center;">
+                             <img src="{{ asset ('images/personne.png') }}" style="width: 40px;height: 40px" alt="" hspace="10"><i></i> <span style="margin-right: 60px;">{{ r.nbPersonne }}</span>
+                             <img src="{{ asset ('images/preparation.png') }}" style="width: 40px;height: 40px" alt="" hspace="10"><i></i> <span style="margin-right: 60px;">{{ r.tempsPreparation|date('H:i') }} </span>
+                           <img src="{{ asset ('images/cuisson2.png') }}" style="width: 40px;height: 40px" alt="" hspace="10"> <i></i>  <span style="margin-right: 60px;">{{ r.tempsCuisson|date('H:i') }} </span>
+                            <img src="{{ asset ('images/repos.png') }}" style="width: 40px;height: 40px" alt="" hspace="10"><i></i> <span style="margin-right: 60px;">{{ r.tempsRepos|date('H:i') }} </span>
+                             <img src="{{ asset ('images/cout.png') }}" style="width: 40px;height: 40px" alt="" hspace="10"><i></i> <span style="margin-right: 60px;"> {{ r.cout }} </span>
+                             <img src="{{ asset ('images/difficulte.png') }}" style="width: 40px;height: 40px" alt="" hspace="10"><i></i> <span style="margin-right: 60px;">{{ r.difficulte }} </span>
+                        </div>
+
+
+                        <hr style=" color:salmon; background-color:#565656; height:2px;" />
+                        </nav>
+                    </div>
+                    <div  class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 " style="width: 300px;">
+                            <nav class="navbar navbar-light bg-light" style="background-color: #E1E1D6;">
+                                <span class="navbar-brand mb-0 h1" style="color: #565656;" ><b>INGRÉDIENTS</b></span>
+                            </nav>
+                            {{ r.ingredients }}
+                        </div>
+
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 " style="width: 866px;">
+                            <nav class="navbar navbar-light bg-light" style="background-color: #E1E1D6;">
+                                <span class="navbar-brand mb-0 h1" style="color: #565656;" ><b>ÉTAPES</b></span>
+                            </nav>
+                            {{ r.etapes }}
+                        </div>
+
+                    </div>
+                    <div class="ps-product__info">
+                        <nav class="navbar navbar-light bg-light" style="background-color: #E1E1D6;">
+                            <span class="navbar-brand mb-0 h1" style="color: #565656;"><b>ASTUCES</b></span>
+                        </nav>
+                        {{ r.astuces }}
+                    </div>
+
+
+                <!-- Comment-->
+                <div class="ps-blog-comment">
+                    <div class="ps-product__info">
+                        <nav class="navbar navbar-light bg-light" style="background-color: salmon;">
+                            <span class="navbar-brand mb-0 h1" style="color: white;"><b>COMMENTAIRES SUR LA RECETTE: {{ r.nom }}</b></span>
+                        </nav>
+
+                    </div>
+                    <div class="ps-comment">
+                        <div class="ps-comment-box">
+                            {%  for com in c %}
+                            <div class="ps-author-box__thumbnail"><img src="{{ asset('images/user.png') }}" alt="">
+                                <h4 style="color: darksalmon;text-align: match-parent;"><b>{{ com.iduser.username }}</b></h4>
+                            </div>
+
+                            <div class="ps-author-box__content" style="margin-bottom: 60px; background-color: 	#f7f7f7; ">
+
+                                <p>{{ com.comment }}</p>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+                </div>
+                <!--Contact-->
+                <div class="ps-contact">
+                    <h3>COMMENTER LA RECETTE:</h3>
+
+
+
+                        {{ form_start(b) }}
+
+                        <div class="form-group">
+                            <p> Pour cette Recette:</p> {{ form_widget(b.idrecette)}}
+
+                            <p> Je confirme sous le nom:</p>
+                            {{ form_widget(b.iduser)}}
+
+                            <textarea class="form-control" placeholder="Text your message here..." rows="6"{{ form_widget(b.comment)}}
+                        </div>
+
+
+                        <div class="form-group">
+                            <button class="ps-btn ps-btn--sm ps-contact__submit"{{ form_widget(b.Ajouter) }}
+                        </div>
+
+                        {{ form_end(b) }}
+                     <div class="VoteArea" style=" display: none; /* Hidden by default */
+                                                   position: fixed; /* Stay in place */
+                                                   z-index: 1; /* Sit on top */
+                                                   padding-top: 100px; /* Location of the box */
+                                                   left: 0;
+                                                   top: 0;
+                                                    width: 100%; /* Full width */
+                                                    height: 100%; /* Full height */
+                                                   overflow: auto; /* Enable scroll if needed */
+                                                    background-color: rgb(0,0,0); /* Fallback color */
+                                                     background-color: rgba(0,0,0,0.4); ">
+                         <div class="modal-content" style=" background-color: #fefefe;
+                                                            margin: auto;
+                                                            padding: 20px;
+                                                            border: 1px solid #888;
+                                                              width: 80%;">
+                         <span class="close" style="color: #aaaaaa;
+                                                     float: right;
+                                                     font-size: 28px;
+                                                     font-weight: bold;">X</span>
+                    {{ form_start(v) }}
+                    {{ form_end(v) }}
+                     </div>
+                     </div>
+
+                    <script src="{{ asset('jquery-3.2.1.min.js') }}"></script>
+                    <script>
+                        $(".showVote").click(function(){
+                            $(".VoteArea").show();});
+                        $(".close").click(function(){
+                            $(".VoteArea").hide();});
+
+
+                    </script>
+
+
+                </div>
+            </div>
+        </div>
+            </div>
+            </div>
+        </div>
     </div>
-    <script src="{{ asset('jquery-3.2.1.min.js') }}"></script>
-<script>
-    $(".linktoaddcomment").click(function(){
-       $(".hideTheCommentAdd").show();});
 
-</script>
-    <hr color="lightsalmon">
-    {%  for com in c %}
-        {{ com.iduser.username }}
-        {{ com.comment }} <br>
-        <hr>
-
-{% endfor %}
 
 
 {% endblock %}

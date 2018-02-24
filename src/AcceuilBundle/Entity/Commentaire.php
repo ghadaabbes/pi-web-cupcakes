@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Commentaire
  *
- * @ORM\Table(name="commentaire", indexes={@ORM\Index(name="idrecette", columns={"idrecette"}), @ORM\Index(name="id", columns={"id"})})
+ * @ORM\Table(name="commentaire")
  * @ORM\Entity
  */
 class Commentaire
@@ -21,6 +21,7 @@ class Commentaire
      */
     private $id;
 
+
     /**
      * @ORM\Column(type="text",nullable=false)
      */
@@ -31,7 +32,7 @@ class Commentaire
      *
      * @ORM\ManyToOne(targetEntity="Recette")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idrecette", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="idrecette", referencedColumnName="id", onDelete="cascade")
      * })
      */
     private $idrecette;
@@ -39,9 +40,9 @@ class Commentaire
     /**
      * @var \User
      *
-     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="User\UserBundle\Entity\User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="iduser", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="iduser", referencedColumnName="id", onDelete="cascade")
      * })
      */
     private $iduser;
@@ -109,6 +110,11 @@ class Commentaire
     {
         $this->iduser = $iduser;
     }
+
+    /**
+     * @return mixed
+     */
+
 
 
 }

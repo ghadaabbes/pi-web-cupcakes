@@ -4,3 +4,41 @@
     <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
 </div>
+<div class="ps-section ps-section--award pt-80 pb-40">
+    <div class="container">
+        <div class="ps-section__header text-center mb-50">
+            <div class="ps-section__top">Bienvenue {{ user.username }}</div>
+            <h3 class="ps-section__title">Votre Profile </h3>
+        </div>
+        <div class="ps-section__content">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                    <div class="ps-award text-center">
+                        <div class="ps-award__icon"><img src="{{ asset ('images/4.png') }}" alt=""></div>
+                        <div class="ps-award__content">
+                            <h3>Déposer une nouvelle recette</h3>
+                            <p>Partager avec nous vos meilleur recettes et astuces.</p><a class="ps-btn ps-btn--xs" href="{{ path('ajouter_Recette') }}">Par ici</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                    <div class="ps-award text-center">
+                        <div class="ps-award__icon"><img src="{{ asset ('images/5.png') }}" alt=""></div>
+                        <div class="ps-award__content">
+                            <h3>Mes Recettes</h3>
+                            <p>Consulter,Modifier,Supprimer</p><a class="ps-btn ps-btn--xs" href="{{ path('mes_Recettes') }}">Par ici</a>
+                        </div>
+                    </div>
+                </div> <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                    <div class="ps-award text-center">
+                        <div class="ps-award__icon"><img src="{{ asset ('images/6.png') }}" alt=""></div>
+                        <div class="ps-award__content">
+                            <h3>Mes infos</h3>
+                            <p>acceder à vos infos personnelles </p><a class="ps-btn ps-btn--xs" href="#">Par ici</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

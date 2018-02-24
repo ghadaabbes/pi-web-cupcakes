@@ -19,7 +19,8 @@ class AppKernel extends Kernel
             new User\UserBundle\UserUserBundle(),
             new \FOS\UserBundle\FOSUserBundle(),
             new AcceuilBundle\AcceuilBundle(),
-
+            new RecetteBundle\RecetteBundle(),
+            new blackknight467\StarRatingBundle\StarRatingBundle(),
 
         ];
 

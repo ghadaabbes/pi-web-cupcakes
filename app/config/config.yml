@@ -4,12 +4,14 @@ imports:
     - { resource: services.yml }
     - { resource: "@UserUserBundle/Resources/config/services.yml" }
     - { resource: "@AcceuilBundle/Resources/config/services.yml" }
+    - { resource: "@RecetteBundle/Resources/config/services.yml" }
 
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
+    images_directory: '%kernel.project_dir%/web/images'
 
 framework:
     #esi: ~
@@ -66,11 +68,9 @@ doctrine:
 # Swiftmailer Configuration
 swiftmailer:
     transport: '%mailer_transport%'
-    auth_mode: '%mailer_auth_mode%'
     host: '%mailer_host%'
     username: '%mailer_user%'
     password: '%mailer_password%'
-    encryption: '%mailer_encryption%'
     stream_options:
             ssl:
                 allow_self_signed: true

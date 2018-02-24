@@ -1,116 +1,87 @@
 {% extends "@FOSUser/layout.html.twig" %}
 {% block try %}
 
-        {% for recette in r %}
-            <tr>
-                <td> {{ recette.nom }}</td>
-                <td> <img src="{{ asset('images/' ~ recette.nomImage) }}" style="width: 80px;height: 80px"></td>
-                <td> {{ recette.type }}</td>
-                <td> {{ recette.description }}</td>
-                <td> <a href="#" target="_blank">Voir recette par ici</a></td>
-                <td> <a href="#" target="_blank">Modifier Cette Recette</a></td>
-                <td> <a href="#" target="_blank">Supprimer Cette Recette</a></td>
 
-
-
-
-
-
-
-            </tr>
-        {% endfor %}
 
 <div id="back2top"><i class="fa fa-angle-up"></i></div>
 <div class="loader"></div>
 <div class="page-wrap">
+    <div class="ps-banner--home-1">
+        <div class="rev_slider_wrapper fullscreen-container" id="revolution-slider-1" data-alias="concept121" data-source="gallery" style="background-color:#000000;padding:0px;">
+            <div class="rev_slider fullscreenbanner" id="rev_slider_1059_1" style="display:none;" data-version="5.4.1">
+                <ul class="ps-banner">
+                    <li data-index="rs-2972" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{{ asset('../../assets/images/concept4-100x100.jpg') }}" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""><img class="rev-slidebg" src="{{  asset('images/banner/1.jpg') }}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" data-no-retina>
+                        <div class="tp-caption ps-banner__caption" id="layer01" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-100','-80','-120','-120']" data-width="['none','none','none','400']" data-whitespace="['nowrap','nowrap','nowrap','normal']" data-type="text" data-responsive_offset="on" data-frames="[{&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:1700,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1000,&quot;to&quot;:&quot;x:left(R);&quot;,&quot;ease&quot;:&quot;Power3.easeIn&quot;}]" style="z-index: 7; white-space: nowrap;text-transform:left;">Mes Recettes</div>
+                        <div class="tp-caption ps-banner__description" id="layer02" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-type="text" data-responsive_offset="on" data-textAlign="['center','center','center','center']" data-frames="[{&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:1500,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1000,&quot;to&quot;:&quot;x:left(R);&quot;,&quot;ease&quot;:&quot;Power3.easeIn&quot;}]">
+
+                    </li>
+                    <li data-index="rs-2973" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{{ asset('../../assets/images/concept4-100x100.jpg') }}" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""><img class="rev-slidebg" src="{{  asset('images/banner/2.jpg') }}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" data-no-retina>
+                        <div class="tp-caption ps-banner__caption" id="layer04" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-100','-80','-120','-120']" data-width="['none','none','none','400']" data-whitespace="['nowrap','nowrap','nowrap','normal']" data-type="text" data-responsive_offset="on" data-frames="[{&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:1700,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1000,&quot;to&quot;:&quot;x:left(R);&quot;,&quot;ease&quot;:&quot;Power3.easeIn&quot;}]" style="z-index: 7; white-space: nowrap;text-transform:left;"></div>
+                        <div class="tp-caption ps-banner__description" id="layer05" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-type="text" data-responsive_offset="on" data-textAlign="['center','center','center','center']" data-frames="[{&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:1500,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1000,&quot;to&quot;:&quot;x:left(R);&quot;,&quot;ease&quot;:&quot;Power3.easeIn&quot;}]"></div>
+                </ul>
+            </div>
+        </div>
+    </div>
     <!-- Heros-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="ps-section__content text-center" >
 
-    <div class="ps-section--page">
+        <div class="ps-breadcrumb">
+            <ol class="breadcrumb">
+                <li><a href="#">Profil </a></li>
+
+                <li class="active">Mes Recette</li>
+            </ol>
+        </div>
+    </div>
+
+    <section class="ps-section ps-section--offer pt-80 pb-100">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 col-lg-push-3 col-md-push-3">
-                    <div class="ps-shop-listing pt-80 pb-40">
-                        <div class="ps-shop-features">
-                            <div class="row">
-                                <div class="ps-section__content text-center">
-                                    <h3 class="ps-section__title" style="color: salmon;">Mes Recettes</h3> </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 "><img class="mb-30" src="images/product-banner/012x.jpg" alt="">
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 "><img class="mb-30" src="images/product-banner/022x.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
+            <div class="ps-section__header text-center mb-100">
+                <h4 class="ps-section__top">Cupcackes Corner</h4>
+                <h3 class="ps-section__title ps-section__title--full">Mes Recettes</h3>
+            </div>
+            <div class="ps-section__content">
+                <div class="masonry-wrapper" data-col-md="4" data-col-sm="2" data-col-xs="1" data-gap="30" data-radio="100%">
 
-                    </div>
-                        <div class="ps-shop">
+
+                </div>
+
+
+
+                <div class="mt-50">
                             {% for recette in r %}
-                            <div class="ps-product--list ps-product--list-large">
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
                                 <div class="ps-product__thumbnail">
-                                    <a class="ps-product__overlay" href="product-detail.html"></a><img src="images/cake/img-cake-2.jpg" alt=""></div>
+                                    <a class="ps-product__overlay" href="{{ path('une_Recette',{"id":recette.id}) }}"></a><img src="{{ asset('images/' ~ recette.nomImage) }}"  alt=""></div>
                                 <div class="ps-product__content">
-                                    <h4 class="ps-product__title"><a href="#">{{ recette.nom }}</a></h4>
-                                    <select class="ps-rating">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="5">5</option>
-                                    </select>
+                                    <h3 class="ps-product__title" style="color:salmon; text-align: center; text-transform: uppercase"><a href="{{ path('une_Recette',{"id":recette.id}) }}">{{ recette.nom }}</a></h3>
+
                                     <p class="ps-product__price">
                                         {{ recette.type }}
                                     </p>
                                     <p>{{ recette.description }}</p>
-                                    <footer class="ps-product__footer clearfix"><a class="ps-btn ps-btn--sm" href="cart.html">Consulter<i class="fa fa-angle-right"></i></a>
-                                        <ul class="ps-product__action">
-                                            <li><a href="#" data-tooltip="Modifier"><i class="ps-icon--heart"></i></a></li>
-                                            <li><a href="#" data-tooltip="Supprimer"><i class="ps-icon--reload"></i></a></li>
+                                    <footer class="ps-product__footer clearfix"><a class="ps-btn ps-btn--sm" href="{{ path('une_Recette',{"id":recette.id}) }}">Consulter<i class="fa fa-angle-right"></i></a>
+
+                                        <ul style="text-align: center;">
+                                            <a href="{{ path("modifier_Recette",{"id":recette.id}) }}" ><img src="{{ asset ('images/modify.png') }}" style="width: 20px;height: 20px" alt=""><i></i></a>
+                                            <a href="{{ path("supprimer_Recette",{"id":recette.id}) }}" ><img src="{{ asset ('images/delete.png') }}" style="width: 20px;height: 20px" alt=""><i></i></a>
+
                                         </ul>
                                     </footer>
                                 </div>
                             </div>
 
-                                    <p>Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate. Cupcake sweet roll sweet dragée dragée. Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate cake.</p>
-                                    <footer class="ps-product__footer clearfix"><a class="ps-btn ps-btn--sm" href="cart.html">Order now<i class="fa fa-angle-right"></i></a>
-                                        <ul class="ps-product__action">
-                                            <li><a href="#" data-tooltip="Add to wishlist"><i class="ps-icon--heart"></i></a></li>
-                                            <li><a href="#" data-tooltip="Compare"><i class="ps-icon--reload"></i></a></li>
-                                        </ul>
-                                    </footer>
-                                </div>
                     {% endfor %}
                         </div>
 
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col-lg-pull-9 col-md-pull-9">
-                    <div class="ps-sidebar">
-                        <aside class="ps-widget ps-widget--sidebar ps-widget--search">
-                            <form method="post" action="search-result.html">
-                                <input class="form-control" type="text" placeholder="Type here bakery name...">
-                                <button type="submit"><i class="ps-icon--search"></i></button>
-                            </form>
-                        </aside>
-                        <aside class="ps-widget ps-widget--sidebar ps-widget--category">
-                            <div class="ps-widget__header">
-                                <h3 class="ps-widget__title">CATEGORY</h3>
-                            </div>
-                            <div class="ps-widget__content">
-                                <ul class="ps-list--circle">
-                                    <li class="current"><a href="product-listing.html"><span class="circle"></span>All bakery (321)</a></li>
-                                    <li><a href="product-listing.html"><span class="circle"></span>Amazin’ Glazin’</a></li>
-                                    <li><a href="product-listing.html"><span class="circle"></span>The Crusty Croissant</a></li>
-                                    <li><a href="product-listing.html"><span class="circle"></span>The Rolling Pin</a></li>
-                                    <li><a href="product-listing.html"><span class="circle"></span>Skippity Scones</a></li>
-                                    <li><a href="product-listing.html"><span class="circle"></span>Mad Batter</a></li>
-                                    <li><a href="product-listing.html"><span class="circle"></span>Confection Connection</a></li>
-                                </ul>
-                            </div>
-
-
-                          </aside>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
+                     </div>
+                 </div>
+    </section>
     </div>
+
+
 {% endblock %}
