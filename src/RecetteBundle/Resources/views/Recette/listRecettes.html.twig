@@ -1,0 +1,52 @@
+{% extends "@FOSUser/layout.html.twig" %}
+{% block try %}
+
+    <br>
+    <br>
+    <br>
+    <br>
+ <a href="{{ path('Rechercher_Recettes') }}"> Chercher recettes par nom</a>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <hr color="lightsalmon">
+    <h4>Tout Recettes</h4>
+
+    <table border="1">
+        <tr>
+            <td> Nom</td>
+            <td>Image </td>
+            <td> Type</td>
+            <td> Description</td>
+            <td> Voir Recette</td>
+        </tr>
+        <div>
+
+        {% for recette in r %}
+            <tr>
+                <td> {{ recette.nom }}</td>
+                <td> <img src="{{ asset('images/' ~ recette.nomImage) }}" style="width: 80px;height: 80px"></td>
+                <td> {{ recette.type }}</td>
+                <td> {{ recette.description }}</td>
+                <td> <a href="{{ path("une_Recette",{"id":recette.id}) }}" target="_blank">Voir recette par ici</a></td>
+
+
+            </tr>
+
+
+        {% endfor %}
+        </div>
+
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+{% endblock %}

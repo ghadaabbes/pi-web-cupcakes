@@ -1,0 +1,77 @@
+{% extends "@FOSUser/layout.html.twig" %}
+{% block try %}
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <table border="1">
+
+        <tr>
+            <td> nom </td>
+            <td>Image </td>
+            <td> Type</td>
+            <td> description </td>
+            <td> cout </td>
+            <td> tempsPreparation </td>
+            <td> tempsReposCuisson</td>
+            <td> tempsRepos </td>
+            <td> nbPersonne </td>
+            <td> difficulte </td>
+            <td> astuces </td>
+
+            <td> ingredients</td>
+            <td> etapes</td>
+
+
+        </tr>
+    <tr>
+
+            <td>{{ r.nom }} </td>
+        <td> <img src="{{ asset('images/' ~ r.nomImage) }}" style="width: 80px;height: 80px"></td>
+                <td> {{ r.type }}</td>
+                <td> {{ r.description }}</td>
+                <td> {{ r.cout }}</td>
+                <td> {{ r.tempsPreparation|date('H:i') }}</td>
+                <td> {{ r.tempsCuisson|date('H:i') }}</td>
+                <td> {{ r.tempsRepos|date('H:i') }}</td>
+                <td> {{ r.nbPersonne }}</td>
+                <td> {{ r.difficulte }}</td>
+                <td> {{ r.astuces }}</td>
+
+                <td> {{ r.ingredients }}</td>
+                <td> {{ r.etapes }}</td>
+
+    </tr>
+
+
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr color="lightsalmon">
+    <a class="linktoaddcomment" href="#">Commenter Cette Recette !</a>
+    <div class="hideTheCommentAdd" hidden>
+
+        {{ form_start(b) }}
+
+        {{ form_end(b) }}
+    </div>
+    <script src="{{ asset('jquery-3.2.1.min.js') }}"></script>
+<script>
+    $(".linktoaddcomment").click(function(){
+       $(".hideTheCommentAdd").show();});
+
+</script>
+    <hr color="lightsalmon">
+    {%  for com in c %}
+        {{ com.iduser.username }}
+        {{ com.comment }} <br>
+        <hr>
+
+{% endfor %}
+
+
+{% endblock %}

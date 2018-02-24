@@ -1,0 +1,9 @@
+recette_homepage:
+    path:     /
+    defaults: { _controller: RecetteBundle:Default:index }
+ajouter_Recette:
+    path:     /ajouterRecette
+    defaults: { _controller: RecetteBundle:Recette:ajouterRecette }
+mes_Recettes:
+    path:     /mesRecettes
+    defaults: { _controller: RecetteBundle:Recette:mesRecettes }

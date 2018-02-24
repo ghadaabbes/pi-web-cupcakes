@@ -1,0 +1,9 @@
+<?php
+
+namespace RecetteBundle\Tests\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+
+class RecetteControllerTest extends WebTestCase
+{
+}
